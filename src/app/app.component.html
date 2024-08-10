@@ -1,0 +1,20 @@
+<form
+  [formGroup]="myForm"
+  style="display: flex; margin:5px; padding:5px; flex-direction: column"
+>
+  <input
+    type="text"
+    class="form-control"
+    formControlName="myFormInput"
+    id="myFormInputId"
+  />
+
+  <button type="submit" [disabled]="!myForm.valid" (click)="save()">
+    Save
+  </button>
+</form>
+<button (click)="undo()" [disabled]="!showUndo">Undo</button>
+
+<button (click)="redo()" [disabled]="!showRedo">Redo</button>
+
+<h4 *ngFor="let redo of redoArray">{{ redo }}</h4>
