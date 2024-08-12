@@ -10,10 +10,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
  import { JitCompilerFactory } from '@angular/platform-browser-dynamic';
+import { UndoRedoComponent } from './uncoRedo/undo-redo.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
-  declarations: [AppComponent],
+  declarations: [AppComponent,UndoRedoComponent],
   bootstrap: [AppComponent],
   providers: [
     { provide: COMPILER_OPTIONS, useValue: {}, multi: true },
